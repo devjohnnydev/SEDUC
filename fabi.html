@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Mim | Fabi</title>
+    <style>
+      /* Configurações Gerais do Site */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f4f7f6;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Cabeçalho (Header) */
+      header {
+        background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        font-weight: 300;
+      }
+
+      /* Container Principal */
+      .container {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Seção Sobre Mim */
+      .perfil {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      /* Avatar Temporário (Círculo cinza, substitua por sua foto se quiser) */
+      .avatar {
+        width: 120px;
+        height: 120px;
+        background-color: #ddd;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: #666;
+        border: 4px solid #a29bfe;
+        flex-shrink: 0;
+      }
+
+      .biografia h2 {
+        color: #6c5ce7;
+        margin-bottom: 10px;
+      }
+
+      /* Seção de Habilidades/Interesses */
+      .habilidades {
+        margin-top: 30px;
+      }
+
+      .habilidades h3 {
+        color: #6c5ce7;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #f4f7f6;
+        padding-bottom: 5px;
+      }
+
+      .lista-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+      }
+
+      .lista-tags li {
+        background-color: #e0d7ff;
+        color: #6c5ce7;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+
+      /* Rodapé / Contato */
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #2d3436;
+        color: white;
+        border-radius: 0 0 8px 8px;
+      }
+
+      footer a {
+        color: #a29bfe;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsividade para celulares */
+      @media (max-width: 600px) {
+        .perfil {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Olá, eu sou a Fabi!</h1>
+      <p>Seja bem-vindo(a) ao meu espaço na web.</p>
+    </header>
+
+    <div class="container">
+      <section class="perfil">
+        <div class="avatar">Fabi</div>
+
+        <div class="biografia">
+          <h2>Um pouco sobre mim</h2>
+          <p>
+            Aqui você pode escrever um texto contando quem você é, o que faz da
+            vida, quais são seus sonhos e o que te motiva todos os dias.
+            Personalize este parágrafo para que ele fique com a sua cara!
+          </p>
+        </div>
+      </section>
+
+      <section class="habilidades">
+        <h3>Meus Interesses & Habilidades</h3>
+        <ul class="lista-tags">
+          <li>HTML & CSS</li>
+          <li>Tecnologia</li>
+          <li>Criatividade</li>
+          <li>Leitura</li>
+          <li>Música</li>
+          <li>Organização</li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>
+          Vamos nos conectar?
+          <a href="mailto:seu-email@exemplo.com">Mande um e-mail</a> ou me
+          encontre nas redes sociais.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
