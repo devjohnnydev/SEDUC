@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier de Mode | Tendências & Estilo</title>
+    <style>
+        /* Configurações Reset e Fontes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Cabeçalho / Menu */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 35px;
+        }
+
+        nav ul li a {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #b5838d;
+        }
+
+        /* Seção Hero (Banner Principal) */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1600&auto=format&fit=crop') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            font-style: italic;
+        }
+
+        .btn-descubra {
+            padding: 12px 35px;
+            background-color: #fff;
+            color: #222;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-descubra:hover {
+            background-color: #222;
+            color: #fff;
+        }
+
+        /* Seção de Introdução / Manifesto */
+        .manifesto {
+            padding: 80px 15%;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .manifesto h2 {
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .manifesto h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 1px;
+            background-color: #222;
+            margin: 15px auto 0 auto;
+        }
+
+        .manifesto p {
+            font-size: 16px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Galeria de Coleções */
+        .colecoes {
+            padding: 40px 8% 80px 8%;
+        }
+
+        .grid-colecoes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            background-color: #eee;
+            height: 450px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: #fff;
+        }
+
+        .card-info h3 {
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .card-info p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #111;
+            color: #fff;
+            padding: 40px 8%;
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        footer p {
+            opacity: 0.6;
+        }
+
+        /* Responsividade Básica */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul li {
+                margin: 0 15px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .manifesto {
+                padding: 60px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">Atelier</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#colecoes">Coleções</a></li>
+                <li><a href="#sobre">O Manifesto</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero" id="home">
+        <h1>O Estilo é Eterno</h1>
+        <p>Descubra a coleção de Outono/Inverno que redefine o minimalismo urbano.</p>
+        <button class="btn-descubra">Explorar Coleção</button>
+    </section>
+
+    <!-- Manifesto / Sobre -->
+    <section class="manifesto" id="sobre">
+        <h2>Essência & Forma</h2>
+        <p>Acreditamos na moda como expressão de identidade. Peças atemporais, cortes precisos e uma paleta de cores neutras que priorizam o conforto e a elegância em qualquer estação do ano.</p>
+    </section>
+
+    <!-- Galeria de Fotos / Tendências -->
+    <section class="colecoes" id="colecoes">
+        <div class="grid-colecoes">
+            
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600&auto=format&fit=crop" alt="Moda Urbana">
+                <div class="card-info">
+                    <h3>Urbano Minimalista</h3>
+                    <p>Linhas retas e tons terrosos.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=600&auto=format&fit=crop" alt="Alta Costura">
+                <div class="card-info">
+                    <h3>Alfaiataria Moderna</h3>
+                    <p>O clássico reinventado para o dia a dia.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600&auto=format&fit=crop" alt="Acessórios">
+                <div class="card-info">
+                    <h3>Acessórios Essenciais</h3>
+                    <p>Os detalhes que transformam o visual.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato">
+        <p>&copy; 2026 Atelier de Mode. Todos os direitos reservados. Feito com estilo.</p>
+    </footer>
+
+</body>
+</html>
